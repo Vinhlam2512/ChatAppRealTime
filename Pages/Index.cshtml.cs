@@ -36,7 +36,7 @@ namespace ChatApp.Pages {
                     if(image != null)
                     {
                         fileName = Path.GetFileName(image.FileName);
-                        string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Image", username);
+                        string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Image", fileName);
                         using (var stream = new FileStream(filePath, FileMode.Create))
                         {
                             image.CopyTo(stream);
@@ -60,7 +60,7 @@ namespace ChatApp.Pages {
         }
 
 
-        public async Task<IActionResult> OnPostLogin(string username, string password)
+        public async Task<IActionResult> OnPostLogin(string username, string password, string ReturnUrl)
         {
             User u = db.Users.FirstOrDefault(x => x.UserName == username && x.PassWord == password);
             if(u != null)
@@ -78,7 +78,7 @@ namespace ChatApp.Pages {
                 });
                 u.IsOnline = true;
                 db.SaveChanges();
-                return Redirect("./Chat");
+                return ReturnUrl == null ? Redirect("./Chat") : Redirect(ReturnUrl);
             }
             return Page();
         }

@@ -32,6 +32,7 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseStaticFiles();
+app.UseAuthorization();
 
 app.MapHub<MessageHub>("/MessageHub");
 app.MapRazorPages();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1YaDFfv8jE1RWHdk7XeEWrMzbrv2rceedaLpyL6Kjm+XEj+frd+LY4HZ8lQR+SgfUcfOXkeGqPB7PIRiwgX/NQ==",
+  "dgSpecHash": "w23m376HlYV9Y1dgF/0GXGu23VQ4x4RPCqkheZtdqHoU1rzD4JhELpc8sYoGSADjkU+Mz0xbCT0cFAa9Gtm/4Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\VINH\\Desktop\\Lab3\\ChatApp\\ChatApp.csproj",
+  "projectFilePath": "D:\\PROJECT\\ChatApp\\ChatApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\VINH\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\VINH\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

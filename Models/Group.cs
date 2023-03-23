@@ -15,6 +15,7 @@ namespace ChatApp.Models
         public int CreatedBy { get; set; }
         public DateTime CreatedAt { get; set; }
 
+        public virtual Message IdNavigation { get; set; } = null!;
         public virtual ICollection<GroupMember> GroupMembers { get; set; }
     }
 }

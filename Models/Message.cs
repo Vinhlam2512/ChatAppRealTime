@@ -13,7 +13,7 @@ namespace ChatApp.Models
         public int? GroupId { get; set; }
 
         public virtual User FromUserNavigation { get; set; } = null!;
-        public virtual GroupMember? Group { get; set; }
         public virtual User? ToUserNavigation { get; set; }
+        public virtual Group? Group { get; set; }
     }
 }

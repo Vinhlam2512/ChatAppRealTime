@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\VINH\\Desktop\\Lab3\\ChatApp\\ChatApp.csproj": {}
+    "D:\\PROJECT\\ChatApp\\ChatApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\VINH\\Desktop\\Lab3\\ChatApp\\ChatApp.csproj": {
+    "D:\\PROJECT\\ChatApp\\ChatApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VINH\\Desktop\\Lab3\\ChatApp\\ChatApp.csproj",
+        "projectUniqueName": "D:\\PROJECT\\ChatApp\\ChatApp.csproj",
         "projectName": "ChatApp",
-        "projectPath": "C:\\Users\\VINH\\Desktop\\Lab3\\ChatApp\\ChatApp.csproj",
+        "projectPath": "D:\\PROJECT\\ChatApp\\ChatApp.csproj",
         "packagesPath": "C:\\Users\\VINH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VINH\\Desktop\\Lab3\\ChatApp\\obj\\",
+        "outputPath": "D:\\PROJECT\\ChatApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\VINH\\AppData\\Roaming\\NuGet\\NuGet.Config",

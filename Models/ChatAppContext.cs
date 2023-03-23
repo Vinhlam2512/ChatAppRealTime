@@ -37,7 +37,7 @@ namespace ChatApp.Models
                 entity.ToTable("GROUP");
 
                 entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("ID");
 
                 entity.Property(e => e.CreatedAt)
@@ -50,15 +50,19 @@ namespace ChatApp.Models
                     .HasMaxLength(100)
                     .IsUnicode(false)
                     .HasColumnName("NAME");
+
+                entity.HasOne(d => d.IdNavigation)
+                    .WithOne(p => p.Group)
+                    .HasForeignKey<Group>(d => d.Id)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_GROUP_MESSAGE");
             });
 
             modelBuilder.Entity<GroupMember>(entity =>
             {
                 entity.ToTable("GROUP_MEMBERS");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("ID");
+                entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.GroupId).HasColumnName("GROUP_ID");
 
@@ -106,11 +110,6 @@ namespace ChatApp.Models
                     .HasForeignKey(d => d.FromUser)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_MESSAGE_USER2");
-
-                entity.HasOne(d => d.Group)
-                    .WithMany(p => p.Messages)
-                    .HasForeignKey(d => d.GroupId)
-                    .HasConstraintName("FK_MESSAGE_GROUP_MEMBERS");
 
                 entity.HasOne(d => d.ToUserNavigation)
                     .WithMany(p => p.MessageToUserNavigations)
